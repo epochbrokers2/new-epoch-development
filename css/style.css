@@ -1,0 +1,141 @@
+.navbar nav, .navbar .navcontainer {
+  display: flex;
+  align-items: center;
+}
+
+@font-face {
+  font-family: "DINPro";
+  src: url("fonts/DINPro-Regular.eot");
+  src: url("fonts/DINPro-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/DINPro-Regular.woff2") format("woff2"), url("fonts/DINPro-Regular.woff") format("woff"), url("fonts/DINPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+*,
+html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  font-family: "DINPro-Regular", sans-serif;
+  color: #5f5f5f;
+  background: #9dd8a2;
+}
+
+.navbar {
+  height: 78px;
+  background: #fff;
+}
+.navbar .navbar__Link-brand img {
+  height: 40px;
+  margin-right: 20px;
+}
+.navbar .navcontainer {
+  max-width: 1140px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.navbar nav {
+  text-align: center;
+  height: 78px;
+}
+.navbar nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.navbar nav .nav a {
+  display: block;
+  text-decoration: none;
+  padding: 0.8em;
+  position: relative;
+  line-height: 1;
+  color: #000;
+}
+.navbar nav .nav {
+  vertical-align: top;
+  display: inline-block;
+  border-radius: 6px;
+}
+.navbar nav .nav li {
+  position: relative;
+}
+.navbar nav .nav li ul.big {
+  width: 500px;
+}
+.navbar nav .nav li ul.big li {
+  width: 50%;
+  float: left;
+}
+.navbar nav .nav > li {
+  float: left;
+  margin-right: 1px;
+}
+.navbar nav .nav > li > a {
+  margin-bottom: 1px;
+  color: #000;
+  font-size: 15px;
+}
+.navbar nav .nav > li > ul > li,.nav > li li > ul > li >a {
+  border-top: 1px solid #e8e3e7;
+}
+.navbar nav .nav > li > ul > li > a {padding: 0.8em 2em 0.8em 0.8em;} 
+.navbar nav .navbar nav .nav > li > ul > li > a {
+  padding: 0.8em 1.5em;
+}
+.navbar nav .nav > li > ul > li > a, .navbar nav .nav > li li ul > li > a {
+  text-align: left;
+}
+.navbar nav .nav > li > ul > li > a span {
+  position: absolute;
+  right: 10px;
+}
+.navbar nav .nav > li > ul > li:hover > a,.nav > li li > ul > li:hover >a{
+  color: #000;
+  background: #d9d9d9;
+}
+.navbar nav .nav > li:hover > a {
+  color: #ec3237;
+}
+.navbar nav .nav > li:first-child {
+  border-radius: 4px 0 0 4px;
+}
+.navbar nav .nav > li:first-child > a {
+  border-radius: 4px 0 0 0;
+}
+.navbar nav .nav > li:last-child {
+  border-radius: 0 0 4px 0;
+  margin-right: 0;
+}
+.navbar nav .nav > li:last-child > a {
+  border-radius: 0 4px 0 0;
+}
+.navbar nav .nav li li a {
+  margin-top: 1px;
+}
+.navbar nav .nav ul {
+  border-top: 1px solid #ec3237;
+  box-shadow: 2px 5px 9px rgba(0, 0, 0, 0.75);
+  background: #fff;
+  position: absolute;
+  white-space: nowrap;
+  z-index: 1;
+  left: -99999em;
+}
+.navbar nav .nav > li:hover > ul {
+  left: auto;
+  min-width: 100%;
+}
+.navbar nav .nav > li li ul {
+  border-left: 1px solid #fff;
+}
+.navbar nav .nav > li li:hover > ul {
+  left: 100%;
+  top: -1px;
+}/*# sourceMappingURL=style.css.map */
