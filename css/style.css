@@ -82,9 +82,7 @@ body {
   color: #000;
   font-size: 15px;
 }
-.navbar nav .nav > li > ul > li,.nav > li li > ul > li >a {
-  border-top: 1px solid #e8e3e7;
-}
+.navbar nav .nav > li > ul > li,.nav > li li > ul > li >a {border-top: 1px solid #e8e3e7;}
 .navbar nav .nav > li > ul > li > a {padding: 0.8em 2em 0.8em 0.8em;} 
 .navbar nav .navbar nav .nav > li > ul > li > a {
   padding: 0.8em 1.5em;
