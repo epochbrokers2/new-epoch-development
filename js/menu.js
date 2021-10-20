@@ -51,7 +51,7 @@
     
     (function($){
     $(document).ready(function(){
-    $("#navbar-menu").menumaker({
+    $("#cssmenu").menumaker({
        format: "multitoggle"
     });
     });
