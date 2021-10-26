@@ -12,3 +12,9 @@ function classToggle() {
 }
 
 document.querySelector('.navbar__Link-toggle').addEventListener('click', classToggle);
+
+$('.epoch-nav-tab').click(function(e){
+    $(this).addClass('epoch-nav-tab-active').siblings().removeClass('epoch-nav-tab-active')
+   var class1 = $(this).attr('data-id')
+    $('.'+class1+'').removeClass('hide').siblings().addClass('hide')
+})
