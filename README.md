@@ -1,2 +1,2 @@
-# new-epoch-development
-New and optimised website development of epoch webite.
+# New-Epoch-Development
+New and optimised website development of epch webite
