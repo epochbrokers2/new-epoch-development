@@ -89,6 +89,8 @@
           margin-bottom: 8px;
           font-size: 16px;
           color: #5f5f5f;
+          .poly_head {font-family: $heading-font;}
+          .poly_buy {font-family: $heading-font;}
         }
         .poly_buy {
           line-height: 22px;
@@ -125,6 +127,7 @@
     color: $red-color;
     margin-bottom: 10px;
     margin-left: 15px;
+    font-family: $heading-font;
   }
   .poly_details_main {
     display: flex;
@@ -193,6 +196,7 @@
     color: $text-color-primary;
     font-weight: 700;
     line-height: 1.5;
+    font-family: $heading-font;
   }
 }
 
@@ -389,6 +393,13 @@
       border: 0;
       width: 50px;
       font-size: 22px;
+      position: relative;
+      .icon-search {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
     }
   }
 }
@@ -396,9 +407,11 @@
   position: relative;
   margin: 3rem 0 4rem;
   h2 {text-align: center;margin-bottom: 2rem;}
-  &_main {
-    border: 1px solid black;
+  .testimonial > div {
+    border: 1px solid $text-color-primary;
     border-radius: 6px;
+  }
+  &_main {
     padding-bottom: 2rem;
   }
   &_slider {
@@ -441,5 +454,154 @@
       }
     }
   }
-  .slick-dots {margin-bottom: 2rem;}
+  .slick-dots {margin-top: -2rem;}
+}
+
+.partner_home {
+  text-align: center;
+  margin-bottom: 3rem;
+  h2 {
+    margin-bottom: 1rem;
+  }
+  &_img {
+    margin: 0 5px;
+  }
+}
+
+.insurer_home_slider {
+  margin: 2rem 0;
+  .row {
+    align-items: center;
+  }
+  &_image {
+    border: 2px solid $text-color-primary;
+    border-radius: 50%;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    img {
+      position: absolute;
+      width: 75%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      z-index: -1;
+    }
+  }
+  .content {
+    margin: 0.8rem 0 0.5rem;
+    font-size: 0.7rem;
+    text-align: center;
+    counter-reset: $text-color-primary;
+  }
+  &_left {
+    position: relative;
+    margin-top: -3.5rem;
+    .line_red_left {
+      position: absolute;
+      width: 57%;
+      height: 1px;
+      border-bottom: 1px dashed $red-color;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0%;
+      z-index: -1;
+      text-align: center;
+    }
+  }
+  &_right {
+    position: relative;
+    margin-top: -3.5rem;
+    h2 {text-align: right;}
+    .line_red_right {
+      position: absolute;
+      width: 57%;
+      height: 1px;
+      border-bottom: 1px dashed $red-color;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0%;
+      z-index: -1;
+      text-align: center;
+    }
+  }
+}
+.media_presence {
+  margin: 3rem 0;
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  &_card {
+    transition: all 0.5s;
+    box-shadow: 0px 3px 9px #00000040;
+    border-radius: 10px;
+    &_content {
+      padding: 15px;
+      margin: -3rem 0.5rem 0;
+      position: relative;
+      background: #fff;
+      border-radius: 8px;
+      min-height: 165px;
+      .time_author {
+        color: #78a9e3;
+        padding-bottom: 0.5rem;
+      }
+      p {font-weight: 600;margin-bottom: 1rem;}
+      a {position: absolute;bottom: 20px;}
+    }
+  }
+}
+.knowledge_home {
+  margin: 3rem 0;
+  h2 {text-align: center;margin-bottom: 2rem;}
+  .knowledge_slider > div {
+    border: 1px solid $text-color-primary;
+    border-radius: 6px;
+  }
+  &_card {
+    &_content {
+      display: flex;align-items: center;padding: 1.5rem;
+      &_img {width: 70px;}
+      &_main {
+        margin-top: 8px;
+        .text {font-family: $heading-font;}
+      }
+    }
+  }
+  .slick-dots {
+    position: absolute;
+    width: auto;
+    right: 15px;
+    top: 56%;
+    transform: translateY(-50%);
+    li {
+      display: block;
+    }
+  }
+}
+
+.blogs {
+  margin: 5rem 0 3rem;
+  h2 {text-align: center;margin-bottom: 2rem;}
+  &_card {
+    transition: all 0.5s;
+    box-shadow: 0px 3px 9px #00000040;
+    border-radius: 10px;
+    margin: 0 10px 15px;
+    &_content {
+      padding: 15px;
+      margin: -3rem 0.5rem 0;
+      position: relative;
+      background: #fff;
+      border-radius: 8px;
+      min-height: 165px;
+      .time_author {
+        color: #78a9e3;
+        padding-bottom: 0.5rem;
+      }
+      p {font-weight: 600;margin-bottom: 1rem;}
+      a {position: absolute;bottom: 20px;}
+    }
+  }
 }

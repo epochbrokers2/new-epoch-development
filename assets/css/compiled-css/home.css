@@ -1,10 +1,23 @@
+/* merriweather-regular - latin */
 @font-face {
-  font-family: "DINPro";
-  src: url("fonts/DINPro-Regular.eot");
-  src: url("fonts/DINPro-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/DINPro-Regular.woff2") format("woff2"), url("fonts/DINPro-Regular.woff") format("woff"), url("fonts/DINPro-Regular.ttf") format("truetype");
-  font-weight: normal;
+  font-family: 'Merriweather';
   font-style: normal;
-  font-display: swap;
+  font-weight: 400;
+  src: url("../fonts/merriweather/merriweather-v25-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/merriweather/merriweather-v25-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/merriweather/merriweather-v25-latin-regular.woff2") format("woff2"), url("../fonts/merriweather/merriweather-v25-latin-regular.woff") format("woff"), url("../fonts/merriweather/merriweather-v25-latin-regular.ttf") format("truetype"), url("../fonts/merriweather/merriweather-v25-latin-regular.svg#Merriweather") format("svg");
+  /* Legacy iOS */
+}
+
+/* ubuntu-regular - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ubuntu/ubuntu-v15-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/ubuntu/ubuntu-v15-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ubuntu/ubuntu-v15-latin-regular.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-v15-latin-regular.woff") format("woff"), url("../fonts/ubuntu/ubuntu-v15-latin-regular.ttf") format("truetype"), url("../fonts/ubuntu/ubuntu-v15-latin-regular.svg#Ubuntu") format("svg");
+  /* Legacy iOS */
 }
 
 *,
@@ -15,7 +28,6 @@
 }
 
 html {
-  font-family: "DINPro-Regular", sans-serif;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
@@ -124,6 +136,7 @@ h3 {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
+  font-family: "Ubuntu", sans-serif;
 }
 
 a {
@@ -159,7 +172,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: 14px;
-  font-family: "DINPro-Regular", sans-serif;
+  font-family: "Merriweather", serif;
   color: #5f5f5f;
 }
 
@@ -823,8 +836,6 @@ footer .copyright p {
 }
 
 .slick-dots {
-  position: absolute;
-  bottom: -25px;
   display: block;
   width: 100%;
   padding: 0;
@@ -836,9 +847,9 @@ footer .copyright p {
 .slick-dots li {
   position: relative;
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin: 0 5px;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
   padding: 0;
 }
 
@@ -973,6 +984,14 @@ footer .copyright p {
   color: #5f5f5f;
 }
 
+.main_policies_category_tab .policy-tab .policy_cat_details .poly_div_content .poly_head {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.main_policies_category_tab .policy-tab .policy_cat_details .poly_div_content .poly_buy {
+  font-family: "Ubuntu", sans-serif;
+}
+
 .main_policies_category_tab .policy-tab .policy_cat_details .poly_buy {
   line-height: 22px;
   font-size: 18px;
@@ -1006,6 +1025,7 @@ footer .copyright p {
   color: #ec3237;
   margin-bottom: 10px;
   margin-left: 15px;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .main_policies_right_item1 .poly_details_main {
@@ -1121,6 +1141,7 @@ footer .copyright p {
   color: #5f5f5f;
   font-weight: 700;
   line-height: 1.5;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .services_home {
@@ -1383,6 +1404,15 @@ footer .copyright p {
   border: 0;
   width: 50px;
   font-size: 22px;
+  position: relative;
+}
+
+.insurology_home_field button .icon-search {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .client_home {
@@ -1395,9 +1425,12 @@ footer .copyright p {
   margin-bottom: 2rem;
 }
 
-.client_home_main {
-  border: 1px solid black;
+.client_home .testimonial > div {
+  border: 1px solid #5f5f5f;
   border-radius: 6px;
+}
+
+.client_home_main {
   padding-bottom: 2rem;
 }
 
@@ -1462,6 +1495,226 @@ footer .copyright p {
 }
 
 .client_home .slick-dots {
+  margin-top: -2rem;
+}
+
+.partner_home {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.partner_home h2 {
+  margin-bottom: 1rem;
+}
+
+.partner_home_img {
+  margin: 0 5px;
+}
+
+.insurer_home_slider {
+  margin: 2rem 0;
+}
+
+.insurer_home_slider .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.insurer_home_slider_image {
+  border: 2px solid #5f5f5f;
+  border-radius: 50%;
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.insurer_home_slider_image img {
+  position: absolute;
+  width: 75%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.insurer_home_slider .content {
+  margin: 0.8rem 0 0.5rem;
+  font-size: 0.7rem;
+  text-align: center;
+  counter-reset: #5f5f5f;
+}
+
+.insurer_home_slider_left {
+  position: relative;
+  margin-top: -3.5rem;
+}
+
+.insurer_home_slider_left .line_red_left {
+  position: absolute;
+  width: 57%;
+  height: 1px;
+  border-bottom: 1px dashed #ec3237;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0%;
+  z-index: -1;
+  text-align: center;
+}
+
+.insurer_home_slider_right {
+  position: relative;
+  margin-top: -3.5rem;
+}
+
+.insurer_home_slider_right h2 {
+  text-align: right;
+}
+
+.insurer_home_slider_right .line_red_right {
+  position: absolute;
+  width: 57%;
+  height: 1px;
+  border-bottom: 1px dashed #ec3237;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0%;
+  z-index: -1;
+  text-align: center;
+}
+
+.media_presence {
+  margin: 3rem 0;
+}
+
+.media_presence h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.media_presence_card {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-box-shadow: 0px 3px 9px #00000040;
+          box-shadow: 0px 3px 9px #00000040;
+  border-radius: 10px;
+}
+
+.media_presence_card_content {
+  padding: 15px;
+  margin: -3rem 0.5rem 0;
+  position: relative;
+  background: #fff;
+  border-radius: 8px;
+  min-height: 165px;
+}
+
+.media_presence_card_content .time_author {
+  color: #78a9e3;
+  padding-bottom: 0.5rem;
+}
+
+.media_presence_card_content p {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.media_presence_card_content a {
+  position: absolute;
+  bottom: 20px;
+}
+
+.knowledge_home {
+  margin: 3rem 0;
+}
+
+.knowledge_home h2 {
+  text-align: center;
   margin-bottom: 2rem;
+}
+
+.knowledge_home .knowledge_slider > div {
+  border: 1px solid #5f5f5f;
+  border-radius: 6px;
+}
+
+.knowledge_home_card_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5rem;
+}
+
+.knowledge_home_card_content_img {
+  width: 70px;
+}
+
+.knowledge_home_card_content_main {
+  margin-top: 8px;
+}
+
+.knowledge_home_card_content_main .text {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.knowledge_home .slick-dots {
+  position: absolute;
+  width: auto;
+  right: 15px;
+  top: 56%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.knowledge_home .slick-dots li {
+  display: block;
+}
+
+.blogs {
+  margin: 5rem 0 3rem;
+}
+
+.blogs h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.blogs_card {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-box-shadow: 0px 3px 9px #00000040;
+          box-shadow: 0px 3px 9px #00000040;
+  border-radius: 10px;
+  margin: 0 10px 15px;
+}
+
+.blogs_card_content {
+  padding: 15px;
+  margin: -3rem 0.5rem 0;
+  position: relative;
+  background: #fff;
+  border-radius: 8px;
+  min-height: 165px;
+}
+
+.blogs_card_content .time_author {
+  color: #78a9e3;
+  padding-bottom: 0.5rem;
+}
+
+.blogs_card_content p {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.blogs_card_content a {
+  position: absolute;
+  bottom: 20px;
 }
 /*# sourceMappingURL=home.css.map */

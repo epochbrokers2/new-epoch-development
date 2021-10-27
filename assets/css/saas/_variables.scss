@@ -1,18 +1,35 @@
+/* merriweather-regular - latin */
 @font-face {
-  font-family: "DINPro";
-  src: url("fonts/DINPro-Regular.eot");
-  src: url("fonts/DINPro-Regular.eot?#iefix") format("embedded-opentype"),
-    url("fonts/DINPro-Regular.woff2") format("woff2"),
-    url("fonts/DINPro-Regular.woff") format("woff"),
-    url("fonts/DINPro-Regular.ttf") format("truetype");
-  font-weight: normal;
+  font-family: 'Merriweather';
   font-style: normal;
-  font-display: swap;
+  font-weight: 400;
+  src: url('../fonts/merriweather/merriweather-v25-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/merriweather/merriweather-v25-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/merriweather/merriweather-v25-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/merriweather/merriweather-v25-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/merriweather/merriweather-v25-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/merriweather/merriweather-v25-latin-regular.svg#Merriweather') format('svg'); /* Legacy iOS */
+}
+/* ubuntu-regular - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/ubuntu/ubuntu-v15-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/ubuntu/ubuntu-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ubuntu/ubuntu-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/ubuntu/ubuntu-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/ubuntu/ubuntu-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/ubuntu/ubuntu-v15-latin-regular.svg#Ubuntu') format('svg'); /* Legacy iOS */
 }
 $main-background: #fff;
 $container-width: 1140px;
 $red-color: #ec3237;
 $text-color-primary: #5f5f5f;
+$heading-font: 'Ubuntu', sans-serif;
+$para-font: 'Merriweather',serif;
 @mixin flex-property($flex-direction) {
   display: flex;
   flex-wrap: wrap;
@@ -66,7 +83,6 @@ $text-color-primary: #5f5f5f;
   box-sizing: border-box;
 }
 html {
-  font-family: "DINPro-Regular", sans-serif;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
@@ -140,7 +156,7 @@ h2 {
 h3 {
   font-size: 1.4rem;
 }
-h1, h2, h3, h4, h5, h6 {margin: 0;}
+h1, h2, h3, h4, h5, h6 {margin: 0;font-family: $heading-font}
 a {
   color: $red-color;
   text-decoration: none;
@@ -165,7 +181,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: 14px;
-  font-family: "DINPro-Regular", sans-serif;
+  font-family: $para-font;
   color: #5f5f5f;
 }
 .col-8 {
