@@ -17,6 +17,13 @@
     right: -10px;
     background: #fff;
     top: 50%;
+    @include mobile {
+      right: auto;
+      top: auto;
+      left: 50%;
+      bottom: -10px;
+      transform: rotate(45deg);
+    }
   }
   &_tab {
     display: block;
@@ -119,7 +126,7 @@
     }
   }
 }
-.main_policies_right_item1 {
+.main_policies_right_item {
   .policy_details_head {
     font-size: 24px;
     line-height: 36px;
@@ -128,6 +135,9 @@
     margin-bottom: 10px;
     margin-left: 15px;
     font-family: $heading-font;
+    @include mobile {
+      margin-top: 3rem;
+    }
   }
   .poly_details_main {
     display: flex;
@@ -140,10 +150,14 @@
       margin: 5px 5px 10px;
       border: 1px solid #eee;
       padding: 10px 0;
+      @include mobile {
+        flex: 0 0 45%;
+      }
       .content {
         line-height: 1.4rem;
         font-size: 0.8rem;
-        color: #5f5f5f;
+        color: $text-color-primary;
+        margin: 0 0.5rem;
       }
       .image {
         position: relative;
@@ -172,15 +186,25 @@
   }
   .product_form {
     @include flex-property(row);
+    @include mobile {
+      flex-direction: column;
+    }
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
     div {
       width: 40%;
+      @include mobile {
+        width: 80%
+      }
       select {
         @include select_dropdown;
+        @include mobile {
+          text-align: center;
+        }
       }
     }
+    span {margin: 1rem 0;font-weight: 600;}
   }
 }
 
@@ -232,14 +256,23 @@
         border-radius: 50%;
         padding: 15px;
         display: inline-block;
+        @include mobile {
+          padding: 5px;
+        }
         img {
           width: 85px;
+          @include mobile {
+            width: 45px;
+          }
         }
       }
       &_head {
         font-size: 14px;
         font-weight: 600;
         margin: 10px 0;
+        @include mobile {
+          font-size: 12px;
+        }
       }
     }
     .hr_line_dotted {
@@ -252,6 +285,10 @@
       left: 12%;
       z-index: -1;
       text-align: center;
+      @include mobile {
+        top: 20%;
+        width: 80%;
+      }
     }
   }
 }
@@ -263,12 +300,24 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 2.5rem;
     padding-top: 3.7rem;
+    @include mobile {
+      justify-content: center;
+      margin-top: 0;
+      padding-top: 1rem;
+    }
     &_box {
       flex: 1;
       margin: 0 2px;
       position: relative;
+      @include mobile {
+        flex: 0 0 20%;
+        max-width: 20%;
+        margin-bottom: 2rem;
+        margin: 1rem 0.5rem;
+      }
       .red_circle {
         border-radius: 50%;
         border: 1px dashed $red-color;
@@ -277,12 +326,23 @@
           width: 100px;
           height: 100px;
           padding: 15px;
+          @include sm-to-md {
+            width: 80px;
+            height: 80px;
+          }
+          @include mobile {
+            width: 80px;
+            height: 80px;
+          }
         }
       }
       .choose_head {
         font-size: 14px;
         font-weight: 600;
         margin: 10px 0;
+        @include mobile {
+          font-size: 11px;
+        }
       }
       .line_top_left {
         position: absolute;
@@ -293,6 +353,9 @@
         left: 50%;
         z-index: -1;
         text-align: center;
+        @include mobile {
+          display: none;
+        }
       }
     }
     .line_top_dot {
@@ -304,6 +367,9 @@
       left: 6.4%;
       z-index: -1;
       text-align: center;
+      @include mobile {
+        display: none;
+      }
     }
   }
 }
@@ -326,14 +392,24 @@
         padding: 15px;
         display: inline-block;
         background: #fff;
+        @include mobile {
+          padding: 5px;
+        }
         img {
           width: 85px;
+          @include mobile {
+            width: 45px;
+            height: 45px;
+          }
         }
       }
       &_head {
         font-size: 14px;
         font-weight: 600;
         margin: 10px 0;
+        @include mobile {
+          font-size: 12px;
+        }
       }
     }
     .hr_line_dotted {
@@ -346,6 +422,14 @@
       left: 12%;
       z-index: -1;
       text-align: center;
+      @include sm-to-md {
+        top: 30%;
+        transform: translateY(-30%);
+      }
+      @include mobile {
+        top: 20%;
+        transform: translateY(-20%);
+      }
     }
   }
 }
@@ -381,6 +465,9 @@
       transition: all 0.2s linear;
       &::placeholder {
         font-weight: 700;
+      }
+      @include mobile {
+        width: 100%;
       }
     }
     button {
@@ -419,6 +506,9 @@
     width: 100%;
     padding: 1rem;
     align-items: center;
+    @include mobile {
+      align-items: flex-start;
+    }
     &_left {
       flex: 0 0 25%;
       max-width: 25%;
@@ -428,8 +518,17 @@
           border-radius: 50%;
           border: 1px solid;
           margin: 0 auto;
-          width: 140px;
-          height: 140px;
+          width: 180px;
+          height: 180px;
+          @include sm-to-md {
+            width: 140px;
+            height: 140px;
+          }
+          @include mobile {
+            width: 80px;
+            height: 80px;
+            margin-left: -0.5rem;
+          }
         }
       }
     }
@@ -450,6 +549,10 @@
           text-align: justify;
           margin: 10px 0 0;
           line-height: 1.8;
+          @include mobile {
+            margin-top: 1.5rem;
+            margin-left: -4rem;
+          }
         }
       }
     }
@@ -459,13 +562,14 @@
 
 .partner_home {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
   &_img {
     margin: 0 5px;
   }
+  .slick-dots {margin-bottom: 0.5rem;}
 }
 
 .insurer_home_slider {
@@ -479,6 +583,10 @@
     position: relative;
     width: 150px;
     height: 150px;
+    @include to-md {
+      width: 90px;
+      height: 90px;
+    }
     img {
       position: absolute;
       width: 75%;
@@ -497,6 +605,9 @@
   &_left {
     position: relative;
     margin-top: -3.5rem;
+    @include mobile {
+      margin: 0 0 1.5rem;
+    }
     .line_red_left {
       position: absolute;
       width: 57%;
@@ -507,6 +618,12 @@
       right: 0%;
       z-index: -1;
       text-align: center;
+      @include sm-to-md {
+        width: 32%;
+      }
+      @include mobile {
+        width: 38%;
+      }
     }
   }
   &_right {
@@ -523,7 +640,20 @@
       left: 0%;
       z-index: -1;
       text-align: center;
+      @include sm-to-md {
+        width: 35%;
+      }
     }
+    @include mobile {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      .line_red_right {width: 38%;}
+    }
+  }
+}
+.awrds {
+  @include mobile {
+    .col-5 {order: -1;}
   }
 }
 .media_presence {
@@ -531,6 +661,9 @@
   h2 {
     text-align: center;
     margin-bottom: 1.5rem;
+  }
+  .row {
+    @include mobile {flex-direction: column;}
   }
   &_card {
     transition: all 0.5s;
@@ -543,12 +676,19 @@
       background: #fff;
       border-radius: 8px;
       min-height: 165px;
+      @include sm-to-md {
+        min-height: 245px;
+      }
       .time_author {
         color: #78a9e3;
         padding-bottom: 0.5rem;
       }
       p {font-weight: 600;margin-bottom: 1rem;}
       a {position: absolute;bottom: 20px;}
+      @include mobile {
+        min-height: auto;
+        a {position: relative;bottom: 0;}
+      }
     }
   }
 }
@@ -566,6 +706,10 @@
       &_main {
         margin-top: 8px;
         .text {font-family: $heading-font;}
+        .downoad_content {
+          margin-top: 0.2rem; font-weight: 600;
+          &:hover {color: $red-color;}
+        }
       }
     }
   }
@@ -596,12 +740,22 @@
       background: #fff;
       border-radius: 8px;
       min-height: 165px;
+      @include sm-to-md {
+        min-height: 185px;
+      }
       .time_author {
         color: #78a9e3;
         padding-bottom: 0.5rem;
       }
       p {font-weight: 600;margin-bottom: 1rem;}
       a {position: absolute;bottom: 20px;}
+      @include mobile {
+        min-height: auto;
+        a {
+          position: relative;
+          bottom: 0;
+        }
+      }
     }
   }
 }

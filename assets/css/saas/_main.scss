@@ -16,7 +16,7 @@
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
-    @include sm-to-md {
+    @include to-md {
       max-width: 100%;
       width: 100%;
     }
@@ -222,6 +222,11 @@ footer {
 .first-fold {
   position: relative;
   padding: 20px 0;
+  .banner-left {
+    @include mobile {
+      margin-bottom: 2rem;
+    }
+  }
   h1 {
     margin-bottom: 1rem;
   }
@@ -234,7 +239,7 @@ footer {
   }
 }
 
-@include sm-to-md {
+@include to-md {
   footer .row:nth-child(3) .equal-grid a {
     font-size: 16px;
   }
@@ -293,7 +298,7 @@ footer {
         background: #fff;
         ul {
           max-height: 200px;
-          overflow: scroll;
+          overflow-y: scroll;
           -webkit-box-shadow: 0 5px 20px 0 rgba(21, 7, 38, 0.08);
           box-shadow: 0 5px 20px 0 rgba(21, 7, 38, 0.08);
           border-left: 1px solid #e8e3e7;
