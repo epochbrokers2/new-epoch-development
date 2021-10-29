@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?ead4j');
-  src:  url('fonts/icomoon.eot?ead4j#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?ead4j') format('truetype'),
-    url('fonts/icomoon.woff?ead4j') format('woff'),
-    url('fonts/icomoon.svg?ead4j#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?bz7ogo');
+  src:  url('fonts/icomoon.eot?bz7ogo#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?bz7ogo') format('truetype'),
+    url('fonts/icomoon.woff?bz7ogo') format('woff'),
+    url('fonts/icomoon.svg?bz7ogo#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-user-solid-circle:before {
+  content: "\e904";
+}
+.icon-old-phone:before {
+  content: "\e905";
+}
+.icon-envelope-open-o:before {
+  content: "\e906";
+}
+.icon-download:before {
+  content: "\e907";
+}
 .icon-dropdown_arrow:before {
   content: "\e900";
 }
@@ -69,4 +81,13 @@
 }
 .icon-star:before {
   content: "\e9d9";
+}
+.icon-home:before {
+  content: "\e908";
+}
+.icon-user-tie:before {
+  content: "\e976";
+}
+.icon-cancel-circle:before {
+  content: "\ea0d";
 }

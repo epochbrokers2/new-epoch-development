@@ -1,0 +1,92 @@
+@import "./main";
+@import "./slick";
+.insurology_home {
+  position: relative;
+  padding: 2rem 0 3rem;
+  margin: 2rem 0;
+  text-align: center;
+  &_field {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 1rem;
+    input {
+      width: 70%;
+      padding: 0.8rem 1.75rem;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.6;
+      outline: 0;
+      color: #4f4f4f;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid $red-color;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border-radius: 0.25rem;
+      -webkit-transition: all 0.2s linear;
+      transition: all 0.2s linear;
+      &::placeholder {
+        font-weight: 700;
+      }
+      @include mobile {
+        width: 100%;
+      }
+    }
+    button {
+      margin-left: -2px;
+      border-radius: 0.25rem;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      color: white;
+      background: red;
+      border: 0;
+      width: 50px;
+      font-size: 22px;
+      position: relative;
+      .icon-search {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+.blogs {
+    margin: 5rem 0 3rem;
+    h2 {text-align: center;margin-bottom: 2rem;}
+    &_card {
+      transition: all 0.5s;
+      box-shadow: 0px 3px 9px #00000040;
+      border-radius: 10px;
+      margin: 0 10px 15px;
+      &_content {
+        padding: 15px;
+        margin: -3rem 0.5rem 0;
+        position: relative;
+        background: #fff;
+        border-radius: 8px;
+        min-height: 165px;
+        @include sm-to-md {
+          min-height: 185px;
+        }
+        .time_author {
+          color: #78a9e3;
+          padding-bottom: 0.5rem;
+        }
+        p {font-weight: 600;margin-bottom: 1rem;}
+        a {position: absolute;bottom: 20px;}
+        @include mobile {
+          min-height: auto;
+          a {
+            position: relative;
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
